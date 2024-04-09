@@ -1,0 +1,190 @@
+@font-face {
+  font-family: unbounded;
+  src: url(font/Unbounded-Light.ttf);
+}
+@font-face {
+  font-family: honk;
+  src: url(font/Honk-Regular.ttf);
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  font-family: unbounded;
+}
+/* html {
+  scroll-behavior: smooth;
+} */
+body {
+  background-color: hsl(281, 89%, 17%);
+}
+header {
+  background-color: hsl(0, 0%, 7%);
+}
+nav {
+  margin-bottom: 10px;
+  background-color: hsl(0, 0%, 7%);
+}
+main {
+  margin: 20px 0px;
+}
+footer {
+  background-color: hsl(38, 14%, 22%);
+  display: flex;
+}
+#about h3 {
+  color: white;
+}
+#about p {
+  color: hsl(0, 0%, 75%);
+}
+header img {
+  width: 100%;
+}
+header h1 {
+  font-family: honk;
+  position: absolute;
+  font-size: 100px;
+  display: grid;
+  padding-top: 70px;
+  padding-right: 30px;
+}
+#image_h1 {
+  display: flex;
+  justify-content: end;
+  padding-right: 70px;
+}
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+}
+/* .fa-solid.fa-ghost.fa-3x {
+  color: hsl(0, 0%, 29%);
+} */
+.nav_left img {
+  height: 30px;
+}
+.nav_right a {
+  border: solid rgb(222, 200, 111);
+  border-radius: 8px;
+  border-width: 5px;
+  padding: 2px;
+  text-decoration: none;
+  color: black;
+  font-family: honk;
+  font-size: x-large;
+}
+.nav_right ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav_right li {
+  list-style-type: none;
+  padding: 0% 20px;
+}
+.game_panel {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px 22px;
+  justify-content: center;
+  padding: 0% 25px;
+}
+.game_panel img {
+  height: 30vh;
+  width: 30vw;
+  border-radius: 20px;
+}
+.quicklinks {
+  text-align: center;
+}
+#team_section {
+  background-color: hsl(35, 14%, 16%);
+  border: 3px solid hsl(35, 14%, 16%);
+  border-radius: 5px;
+  margin: 10px;
+  width: 300px;
+  padding: 10px 25px;
+}
+.team a {
+  text-decoration: none;
+  color: aqua;
+}
+.team ul {
+  text-align: center;
+}
+#project_section {
+  padding: 10px 40px;
+}
+
+/*                         transitions              */
+
+.game1 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+.game1 .game_title {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game1:hover .game_title {
+  visibility: visible;
+}
+
+.game2 .game_title {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game2:hover .game_title {
+  visibility: visible;
+}
+
+.game3 .game_title {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game3:hover .game_title {
+  visibility: visible;
+}
+.game4 .game_title {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game4:hover .game_title {
+  visibility: visible;
+}
