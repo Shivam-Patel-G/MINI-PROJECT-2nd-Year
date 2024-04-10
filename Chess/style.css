@@ -71,15 +71,15 @@ img {
 }
 .allowed {
   opacity: 0.8;
-  background: radial-gradient(#333, #222) !important;
+  background: radial-gradient(rgb(171, 255, 171), white) !important;
   /*-webkit-box-shadow: inset 1px -4px 92px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: inset 1px -4px 92px 0px rgba(0,0,0,0.75);
 	box-shadow: inset 1px -4px 92px 0px rgba(0,0,0,0.75);*/
   border: 1px solid black !important;
 }
 .clicked-square {
-  background: radial-gradient(#333, #222) !important;
-  border: 1px solid black !important;
+  background: radial-gradient(white,green) !important;
+  border: 1px solid white !important;
 }
 #sematary img {
   transform: rotateZ(0);
@@ -133,6 +133,7 @@ img {
   display: block !important;
   animation: showMessage 1s ease-out;
   animation-fill-mode: both;
+
 }
 @keyframes showMessage {
   0% {
