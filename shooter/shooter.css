@@ -1,0 +1,19 @@
+@font-face {
+    font-family: honk;
+    src: url(/font/Honk-Regular.ttf);
+  }
+body{
+    background-color: #2a1e5c;
+}
+h1{
+    font-family: honk;
+    color: antiquewhite;
+    font-size: 3rem;
+}
+p{
+    color: antiquewhite;
+}
+canvas{
+    margin-left: 20vw;
+    /* margin-top: 10vw; */
+}   

@@ -122,7 +122,6 @@ header h1 {
 .game1 {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 /* Tooltip text */
@@ -186,5 +185,20 @@ header h1 {
 }
 
 .game4:hover .game_title {
+  visibility: visible;
+}
+.game5 .game_title {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game5:hover .game_title {
   visibility: visible;
 }

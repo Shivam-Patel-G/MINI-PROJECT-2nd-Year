@@ -13,7 +13,7 @@ function spawnObject() {
         const object = {
           x: Math.random() * (canvas.width - 40), // Adjust max X for object size
           y: Math.random() * (canvas.height - 40), // Adjust max Y for object size
-          size: 40 // Double the size
+          size: 80 // Double the size
         };
         // Check if object stays within canvas
         if (object.x >= 0 && object.x + object.size <= canvas.width &&
@@ -33,7 +33,7 @@ function draw() {
 
   // Draw objects
   objects.forEach(object => {
-    ctx.fillStyle = "red"; // Change color if desired
+    ctx.fillStyle = "lime"; // Change color if desired
     ctx.fillRect(object.x, object.y, object.size, object.size);
   });
 
@@ -70,3 +70,44 @@ function gameLoop() {
 }
 
 gameLoop();
+
+function startGame() {
+  score = 0;
+  objects = [];
+  gameLoop();
+  // Start the timer for 60 seconds
+  timer = setTimeout(() => {
+    gameOver();
+  }, 30000);
+}
+
+function gameOver() {
+  // Stop the game loop
+  window.cancelAnimationFrame(gameLoop);
+  // Clear the timer
+  clearTimeout(timer);
+
+  // Display a popup with score and restart button
+  const popup = document.createElement("div");
+  popup.style.cssText = `
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+  `;
+  popup.innerHTML = `<h3>Game Over!</h3><p>Your score: ${score}</p>`;
+  const restartButton = document.createElement("button");
+  restartButton.textContent = "Restart Game";
+  restartButton.addEventListener("click", () => {
+    startGame();
+    popup.remove();
+  });
+  popup.appendChild(restartButton);
+  document.body.appendChild(popup);
+}
+
+startGame(); // Start the game
