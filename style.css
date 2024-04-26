@@ -202,3 +202,19 @@ header h1 {
 .game5:hover .game_title {
   visibility: visible;
 }
+
+.game6 .game_title {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.game6:hover .game_title {
+  visibility: visible;
+}
